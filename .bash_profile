@@ -1,5 +1,3 @@
-eval "$(rbenv init -)"
-
 # Environment Variables
   export EDITOR='subl'
   export PATH="$HOME/bin:/usr/local/bin:$PATH"
@@ -53,7 +51,3 @@ eval "$(rbenv init -)"
   }
 
 source $HOME/.oh-my-git/prompt.sh
-
-alias dw="docker-compose run --rm web $ARGV"
-alias dwt="docker-compose run --rm -e RAILS_ENV=test web $ARGV"
-eval $(docker-machine env default)
