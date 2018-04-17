@@ -1,9 +1,8 @@
 # Environment Variables
-  export EDITOR='subl'
+  export EDITOR='subl -w'
   export PATH="$HOME/bin:/usr/local/bin:$PATH"
-  # Added by the Heroku Toolbelt
-  export PATH="/usr/local/heroku/bin:$PATH"
-  export LANG=en_US.UTF-8
+  eval "$(rbenv init -)"
+
 
 # ALIASES
   # -l  long format
@@ -16,7 +15,6 @@
   alias l="ls -lFGgohq"
 
   # git
-  alias    git=hub
   alias     ga="git add"
   alias     gb="git branch"
   alias     gc="git commit -v"
@@ -32,12 +30,6 @@
   alias  daily="git log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cD) %C(bold blue)<%an>%Creset' --since yesterday --author francisco"
   alias weekly="git log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cD) %C(bold blue)<%an>%Creset' --since last_week --author francisco"
 
-  # homebrew
-  alias brew-formulas="open 'https://github.com/mxcl/homebrew/tree/master/Library/Formula'"
-
-  # generic
-  alias ss="python -m SimpleHTTPServer" # simple server (serves current dir on port 8000)
-
   # when you forget to bundle exec, just run `be` it will rerun the command with bundler
   # when you want to run a command with bundler, just prepend this function, ie `be rake spec`
   function be {
@@ -50,4 +42,4 @@
     fi
   }
 
-source $HOME/.oh-my-git/prompt.sh
+# source $HOME/.oh-my-git/prompt.sh
